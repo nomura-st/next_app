@@ -11,6 +11,6 @@ datasource db {
 model WorkerInfo {
   id       String  @id 
   name     String?
-  birthday DateTime?
+  birthday String?
   officeId String?
 }

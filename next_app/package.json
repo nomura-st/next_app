@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "db:mig": "npx prisma migrate dev --schema=./prisma/dev/schema.prisma && npx prisma migrate dev --schema=./prisma/dev/schema_append.prisma",
     "db:clgen": "npx prisma generate --schema=./prisma/dev/schema.prisma && npx prisma generate --schema=./prisma/dev/schema_append.prisma",
     "lint": "next lint"
   },
