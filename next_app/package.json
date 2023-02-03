@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "db:clgen": "npx prisma generate --schema=./prisma/dev/schema.prisma && npx prisma generate --schema=./prisma/dev/schema_append.prisma",
     "lint": "next lint"
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@prisma/client": "^4.9.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
@@ -19,5 +21,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "prisma": "^4.9.0"
   }
 }
