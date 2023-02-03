@@ -1,4 +1,4 @@
-export function parse(dateStr: string) {
+export function parse(dateStr: string | null) {
   if (dateStr == null) {
     return null;
   }

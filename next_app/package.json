@@ -6,8 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "db:mig": "npx prisma migrate dev --schema=./prisma/dev/schema.prisma && npx prisma migrate dev --schema=./prisma/dev/schema_append.prisma",
-    "db:clgen": "npx prisma generate --schema=./prisma/dev/schema.prisma && npx prisma generate --schema=./prisma/dev/schema_append.prisma",
+    "db:dev:init": "npm run db:dev:push",
+    "db:dev:push": "cd prisma/dev && npx prisma db push --schema=./schema.prisma && npx prisma db push --schema=./schema_append.prisma",
+    "db:dev:mig": "cd prisma/dev && npx prisma migrate dev --schema=./schema.prisma && npx prisma migrate dev --schema=./schema_append.prisma",
+    "db:dev:clgen": "cd prisma/dev && npx prisma generate --schema=./schema.prisma && npx prisma generate --schema=./schema_append.prisma",
+    "db:test:push": "cd prisma/test && npx prisma db push --schema=./schema.prisma && npx prisma db push --schema=./schema_append.prisma",
+    "db:test:mig": "cd prisma/test && npx prisma migrate dev --schema=./schema.prisma && npx prisma migrate dev --schema=./schema_append.prisma",
+    "db:test:clgen": "cd prisma/test && npx prisma generate --schema=./schema.prisma && npx prisma generate --schema=./schema_append.prisma",
     "lint": "next lint"
   },
   "dependencies": {
