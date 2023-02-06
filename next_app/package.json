@@ -7,12 +7,12 @@
     "build": "next build",
     "start": "next start",
     "db:dev:init": "npm run db:dev:push",
-    "db:dev:push": "cd prisma/dev && npx prisma db push --schema=./schema.prisma && npx prisma db push --schema=./schema_append.prisma",
-    "db:dev:mig": "cd prisma/dev && npx prisma migrate dev --schema=./schema.prisma && npx prisma migrate dev --schema=./schema_append.prisma",
-    "db:dev:clgen": "cd prisma/dev && npx prisma generate --schema=./schema.prisma && npx prisma generate --schema=./schema_append.prisma",
-    "db:test:push": "cd prisma/test && npx prisma db push --schema=./schema.prisma && npx prisma db push --schema=./schema_append.prisma",
-    "db:test:mig": "cd prisma/test && npx prisma migrate dev --schema=./schema.prisma && npx prisma migrate dev --schema=./schema_append.prisma",
-    "db:test:clgen": "cd prisma/test && npx prisma generate --schema=./schema.prisma && npx prisma generate --schema=./schema_append.prisma",
+    "db:dev:push": "npx prisma db push --schema=./prisma/dev/schema.prisma && npx prisma db push --schema=./prisma/dev/schema_append.prisma",
+    "db:dev:mig": "npx prisma migrate dev --schema=./prisma/dev/schema.prisma && npx prisma migrate dev --schema=./prisma/dev/schema_append.prisma",
+    "db:dev:clgen": "npx prisma generate --schema=./prisma/dev/schema.prisma && npx prisma generate --schema=./prisma/dev/schema_append.prisma",
+    "db:test:push": "npx prisma db push --schema=./prisma/test/schema.prisma && npx prisma db push --schema=./prisma/test/schema_append.prisma",
+    "db:test:mig": "npx prisma migrate dev --schema=./prisma/test/schema.prisma && npx prisma migrate dev --schema=./prisma/test/schema_append.prisma",
+    "db:test:clgen": "npx prisma generate --schema=./prisma/test/schema.prisma && npx prisma generate --schema=./prisma/test/schema_append.prisma",
     "lint": "next lint"
   },
   "dependencies": {
@@ -32,6 +32,7 @@
   "devDependencies": {
     "@types/react-datepicker": "^4.8.0",
     "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
     "daisyui": "^2.50.0",
     "postcss": "^8.4.21",
     "prisma": "^4.9.0",
