@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "db:dev:init": "npm run db:dev:push",
+    "db:dev:studio:1": "npx prisma studio --schema=./prisma/dev/schema.prisma",
+    "db:dev:studio:2": "npx prisma studio --schema=./prisma/dev/schema_append.prisma",
     "db:dev:push": "npx prisma db push --schema=./prisma/dev/schema.prisma && npx prisma db push --schema=./prisma/dev/schema_append.prisma",
     "db:dev:mig": "npx prisma migrate dev --schema=./prisma/dev/schema.prisma && npx prisma migrate dev --schema=./prisma/dev/schema_append.prisma",
     "db:dev:clgen": "npx prisma generate --schema=./prisma/dev/schema.prisma && npx prisma generate --schema=./prisma/dev/schema_append.prisma",

@@ -21,7 +21,7 @@ const WorkersListPage = (props: { workers: WorkerInfo[] }) => {
   const [workers, setWorkers] = useState([] as WorkerInfo[]);
   useEffect(() => {
     setWorkers(props.workers);
-  }, []);
+  }, [props.workers]);
 
   return <WorkerList workers={workers}></WorkerList>;
 };
