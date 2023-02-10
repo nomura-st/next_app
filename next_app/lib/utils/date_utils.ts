@@ -12,3 +12,11 @@ export function parse(dateStr: string | null) {
 
   return null;
 }
+
+export const incrementAsync = (amount: string) => {
+  return (dispatch: any) => {
+    setTimeout(() => {
+      dispatch(parse(amount));
+    }, 1000);
+  };
+};
