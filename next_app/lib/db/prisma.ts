@@ -2,7 +2,9 @@
 import { PrismaClient } from "../../prisma/dev/generated/db";
 
 let prisma: PrismaClient;
-prisma = new PrismaClient();
+prisma = new PrismaClient({
+  log: ["query", "info", "warn", "error"],
+});
 
 // TODO:CLIENTはシングルトン
 // TODO:production/developでデータ先を変更

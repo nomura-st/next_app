@@ -21,7 +21,7 @@ const WorkersListPage = (props: { workers: WorkerInfo[] }) => {
   const [workers, setWorkers] = useState([] as WorkerInfo[]);
   useEffect(() => {
     setWorkers(props.workers);
-  }, []); // このhookが依存する変数はなし=初回のみ実行
+  }, [props.workers]);
 
   return <WorkerList workers={workers}></WorkerList>;
 };
